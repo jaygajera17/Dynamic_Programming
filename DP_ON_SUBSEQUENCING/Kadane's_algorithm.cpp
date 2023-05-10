@@ -54,8 +54,7 @@ https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
     {
         sum=sum+arr[i]; 
         if(sum>maxi) maxi=sum;
-        if(sum<0)
-         sum=0; 
+        if(sum<0) sum=0; 
     }
     return maxi;
    }

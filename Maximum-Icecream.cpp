@@ -48,6 +48,25 @@ int func(int ind,int target,vector<int>&arr)
    }
 
     int maxIceCream(vector<int>& costs, int coins) {
-        
-       return func(costs.size()-1,coins,costs);
+         return func(costs.size()-1,coins,costs);
     }
+
+
+/* Greedy */
+
+  sort(costs.begin(),costs.end());
+        int count=0;
+        for(int i=0;i<costs.size();i++ )
+        {
+            
+            coins=coins-costs[i];
+            if(coins>=0)
+            { 
+              count++;
+             }
+            else
+            {
+               return count;
+            }
+        }
+        return count;
